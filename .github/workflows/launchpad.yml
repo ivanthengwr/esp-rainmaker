@@ -100,9 +100,7 @@ jobs:
           path: images
 
   deploy:
-    # Disable the job in forks, and only deploy from master so a manual
-    # workflow_dispatch on a feature branch just exercises the builds.
-    if: ${{ github.repository_owner == 'espressif' && github.ref == 'refs/heads/master' }}
+    # TEST ONLY: guard removed so the fork publishes launchpad.toml to its Pages
 
     needs: Build
 
